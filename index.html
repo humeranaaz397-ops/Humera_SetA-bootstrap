@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The World Travel</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <style>
+    body{
+      background:#f4f7f6;
+      font-family: Arial, sans-serif;
+    }
+
+    .navbar{
+      background:linear-gradient(90deg,#023047,#126782);
+    }
+
+    .navbar-brand,
+    .nav-link{
+      color:white ;
+      font-weight:600;
+    }
+
+    .nav-link:hover{
+      color:#ffb703 ;
+    }
+
+    .hero-img{
+      height:500px;
+      object-fit:cover;
+    }
+
+    .carousel-item::before{
+      position:absolute;
+      width:100%;
+      height:100%;
+      background:rgba(0,0,0,0.45);
+     
+    }
+
+    .carousel-caption{
+      bottom:120px;
+    }
+
+    .carousel-caption h1{
+      font-size:58px;
+      font-weight:bold;
+    }
+
+    .section-title{
+      color:#023047;
+      font-weight:bold;
+    }
+
+    .card{
+      border:none;
+      border-radius:18px;
+      overflow:hidden;
+      box-shadow:0 5px 18px rgba(0,0,0,0.12);
+    
+    }
+
+    .card img{
+      height:240px;
+      object-fit:cover;
+    }
+
+    .about{
+      background:white;
+      padding:60px 0;
+    }
+
+    .about img{
+      width:100%;
+      border-radius:20px;
+    }
+
+    .btn-main{
+      background:#ffb703;
+      color:#023047;
+      font-weight:bold;
+      border:none;
+      border-radius:25px;
+      padding:10px 25px;
+    }
+
+    .btn-main:hover{
+      background:#fb8500;
+      color:white;
+    }
+
+    footer{
+      background:#023047;
+      color:white;
+    }
+
+    @media(max-width:768px){
+      .hero-img{
+        height:320px;
+      }
+
+      .carousel-caption{
+        bottom:60px;
+        text-align:center ;
+      }
+
+      .carousel-caption h1{
+        font-size:32px;
+      }
+
+      .carousel-caption p{
+        font-size:15px;
+      }
+
+      .navbar form{
+        margin-top:10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="https://img.freepik.com/premium-photo/travel-world-monument-concept_117023-15.jpg" width="45" height="45" class="rounded-circle">
+      The World Travel
+    </a>
+
+    <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarScroll">
+      <ul class="navbar-nav ms-auto me-3">
+        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#guides">Travel Guides</a></li>
+        <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+      </ul>
+
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search destination">
+        <button class="btn btn-warning" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<section id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+
+  <div class="carousel-inner">
+
+    <div class="carousel-item active">
+      <img src="https://etimg.etb2bimg.com/photo/113130018.cms" class="d-block w-100 hero-img">
+      <div class="carousel-caption text-start">
+        <h1>Explore The World</h1>
+        <p>Discover beautiful places, hidden gems, and unforgettable travel experiences.</p>
+        <button class="btn btn-main">Start Exploring</button>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="https://plus.unsplash.com/premium_photo-1661883801442-3fdb21a619f1?fm=jpg&q=60&w=3000" class="d-block w-100 hero-img">
+      <div class="carousel-caption text-start">
+        <h1>Adventure Awaits</h1>
+        <p>Travel through mountains, beaches, forests, and amazing cities.</p>
+        <button class="btn btn-main">Explore Now</button>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="https://www.sotc.in/blog/wp-content/uploads/2026/02/Best-Places-To-Visit-In-India-In-June.webp" class="d-block w-100 hero-img">
+      <div class="carousel-caption text-start">
+        <h1>Travel With Passion</h1>
+        <p>Create memories and enjoy every journey with confidence.</p>
+        <button class="btn btn-main">View Guides</button>
+      </div>
+    </div>
+
+  </div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+
+  <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</section>
+
+<section class="container py-5">
+  <div class="row g-4">
+
+    <div class="col-md-4">
+      <div class="card h-100 text-center">
+        <img src="https://countryandstable.co.uk/product_images/uploaded_images/chestnut.jpg" class="card-img-top">
+        <div class="card-body">
+          <h5>Travel Blog</h5>
+          <p>Read inspiring travel stories, tips, and guides for your next journey.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card h-100 text-center">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/049/855/771/small/nature-background-high-resolution-wallpaper-for-a-serene-and-stunning-view-free-photo.jpg" class="card-img-top">
+        <div class="card-body">
+          <h5>Explore Nature</h5>
+          <p>Enjoy peaceful forests, mountains, waterfalls, and natural beauty.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card h-100 text-center">
+        <img src="https://1rsrs.rationaltabs.com/CMS/698FEEC8-44B1-47FF-AE39-9DF91336345F/Blog/bwwbihrkldeacb4v.jpg" class="card-img-top">
+        <div class="card-body">
+          <h5>Travel Gallery</h5>
+          <p>View beautiful travel moments captured from different destinations.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="container">
+    <div class="row align-items-center g-5">
+
+      <div class="col-lg-6">
+        <img src="https://thumbs.dreamstime.com/b/beautiful-young-woman-traveling-girl-traveler-enjoy-travel-happy-walking-road-adventure-coming-concept-78239933.jpg">
+      </div>
+
+      <div class="col-lg-6">
+        <h2 class="section-title">About The World Travel</h2>
+        <p class="text-secondary mt-3">
+         Hey there! I’m Humera Naaz, an Indian traveler, explorer, and adventure lover who enjoys discovering beautiful places, hidden gems, and different cultures around the world. </p>
+
+        <p class="text-secondary">
+         Traveling for me is more than just visiting places — it’s about experiencing nature, meeting new people, learning traditions, trying local food, and creating unforgettable memories.
+         I started sharing my travel experiences to inspire others to explore the world with confidence and curiosity. 
+         From peaceful mountains and waterfalls to vibrant cities and historical places, every journey teaches me something new. </p>
+        <p class="text-secondary">
+          </p>
+<p class="text-secondary">
+         Along with traveling, I love photography, storytelling, and capturing moments that show the beauty of nature and culture. Whether it’s a sunrise hike, a road trip, a beach escape, or exploring local streets, I enjoy every part of the adventure. </p>
+<p class="text-secondary">
+         My dream is to travel across different countries, experience unique cultures, and help others discover amazing destinations, travel tips, and budget-friendly adventures.</p>
+
+<p>I may not have traveled everywhere yet, but it’s definitely on my list!</p>
+
+
+        <button class="btn btn-main">Know More</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="container py-5" id="guides">
+  <div class="text-center mb-4">
+    <h1 class="section-title">Travel Guides</h1>
+    <p class="text-secondary">Popular travel blog posts and destination guides</p>
+  </div>
+
+  <div class="row g-4">
+
+    <div class="col-md-4">
+      <div class="card h-100">
+        <img src="https://img.static-kl.com/transform/bb1c45ef-bc48-407b-a559-c8b7ca39d7a3/" class="card-img-top">
+        <div class="card-body">
+          <h5>How To Visit The Pyramids In Egypt</h5>
+          <p>Learn the best time, travel tips, and must-see places near the pyramids.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card h-100">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqXnzxFW6_oyW3b-7XST24i3wQZTXDsbuPSQ&s" class="card-img-top">
+        <div class="card-body">
+          <h5>Nusa Penida Island Guide For Bali</h5>
+          <p>Explore beaches, cliffs, viewpoints, and peaceful island adventures.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card h-100">
+        <img src="https://thewoodsresorts.com/uploads/media/family-travel-tips-for-a-perfect-vacation63848c1585281.jpg" class="card-img-top">
+        <div class="card-body">
+          <h5>Best Family Vacation Ideas</h5>
+          <p>Find safe, fun, and beautiful places to travel with your family.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="container py-5" id="gallery">
+  <div class="text-center mb-4">
+    <h1 class="section-title">My Gallery</h1>
+    <p class="text-secondary">Beautiful travel memories and destination photos</p>
+  </div>
+
+  <div class="row g-4">
+
+    <div class="col-md-3 col-sm-6">
+      <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyfYgNHUdn0finAQg6zioEgKyGktT8X41Eyw&s">
+      </div>
+    </div>
+
+    <div class="col-md-3 col-sm-6">
+      <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcST7pCAUt8__wIU45C1lPcoM4iU-mi-UnE7ng&s">
+      </div>
+    </div>
+
+    <div class="col-md-3 col-sm-6">
+      <div class="card">
+        <img src="https://www.momapprovedtravel.com/wp-content/uploads/2025/01/BTC-Family-on-beach-768x490.jpg">
+      </div>
+    </div>
+
+    <div class="col-md-3 col-sm-6">
+      <div class="card">
+        <img src="https://thewoodsresorts.com/uploads/media/family-travel-tips-for-a-perfect-vacation63848c1585281.jpg">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="py-4 text-center">
+  <div class="container">
+    <h4>The World Travel</h4>
+    <p>Explore the world, discover nature, and create unforgettable memories.</p>
+
+    <div class="fs-4 mb-3">
+      <i class="bi bi-facebook mx-2"></i>
+      <i class="bi bi-instagram mx-2"></i>
+      <i class="bi bi-youtube mx-2"></i>
+      <i class="bi bi-twitter-x mx-2"></i>
+    </div>
+
+    <p class="mb-0">© 2026 The World Travel | All Rights Reserved</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
